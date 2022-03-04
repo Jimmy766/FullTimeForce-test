@@ -1,0 +1,27 @@
+{
+  "name": "fulltimeforce-challenge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jimmy766/FullTimeForce-test.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jimmy766/FullTimeForce-test/issues"
+  },
+  "homepage": "https://github.com/Jimmy766/FullTimeForce-test#readme",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "nodemon": "^2.0.15",
+    "request": "^2.88.2"
+  }
+}
