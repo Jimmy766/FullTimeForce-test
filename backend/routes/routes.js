@@ -9,11 +9,12 @@ router.get('/',(req,res)=>{
 router.get('/commits',(req,res)=>{
   
     const requestOptions = {
-        url: 'https://api.github.com/repos/vitejs/awesome-vite/commits',
+        url: 'https://api.github.com/repos/Jimmy766/FullTimeForce-test/commits',
         method: 'GET',
         json: {},
         qs: {},
-        headers: {'user-agent': 'node.js'}
+        headers: {'user-agent': 'node.js',
+        'Authorization': `token ${process.env.GIT_TOKEN}`}
       
       };
       request(requestOptions, (err, response, body) => {
@@ -24,14 +25,16 @@ router.get('/commits',(req,res)=>{
           console.log(body);
 
           let result=body.map(item=>{
+            
             return {
                 sha:item.sha,
                 message:item.commit.message,
                 url:item.url,
-                date:item.author.date,
+                date:item.commit.author.date,
                 name:item.commit.author.name
             }
           });
+          
           res.send(result);
         } else {
           console.log(response.statusCode);
