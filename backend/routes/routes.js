@@ -1,12 +1,13 @@
 const request = require('request');
 const {Router} = require('express');
 const router = Router();
+require('dotenv').config();
 
 
 router.get('/',(req,res)=>{
   
     const requestOptions = {
-        url: 'https://api.github.com/repos/Jimmy766/FullTimeForce-test/commits',
+        url: process.env.GIT_URL_COMMITS,
         method: 'GET',
         json: {},
         qs: {},
