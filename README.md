@@ -38,12 +38,17 @@ npm i
 ```
 npm run start
   ```
+
+Exposed endpoint:
+```
+http://localhost:4000/api/commits/
+  ```
 - front end
 
+Exposed URL:
   
  ```
-npm run start
+http://localhost:3000/
   ```
-
 
 
