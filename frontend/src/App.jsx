@@ -8,7 +8,7 @@ function App() {
   const [commits, setCommits] = useState([])
 
   useEffect(() => {
-    fetch('http://localhost:4000/api/commits/commits', {
+    fetch('http://localhost:4000/api/commits/', {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json'

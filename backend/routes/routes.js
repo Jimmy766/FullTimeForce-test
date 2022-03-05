@@ -2,11 +2,8 @@ const request = require('request');
 const {Router} = require('express');
 const router = Router();
 
-router.get('/',(req,res)=>{
-    res.send('Hello World');
-});
 
-router.get('/commits',(req,res)=>{
+router.get('/',(req,res)=>{
   
     const requestOptions = {
         url: 'https://api.github.com/repos/Jimmy766/FullTimeForce-test/commits',
